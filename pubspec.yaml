@@ -1,0 +1,75 @@
+name: dummy_app
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  collection: ^1.18.0
+  device_info: ^2.0.3
+  dio: ^5.4.0
+  extended_image: ^8.2.0
+  firebase_analytics: ^10.8.0
+  firebase_auth: ^4.16.0
+  firebase_core: ^2.24.2
+  firebase_crashlytics: ^3.4.9
+  firebase_messaging: ^14.7.10
+  firebase_remote_config: ^4.3.8
+  flutter:
+    sdk: flutter
+  flutter_downloader: ^1.11.6
+  flutter_easyloading: ^3.0.5
+  flutter_inappwebview: ^6.0.0
+  flutter_native_splash: ^2.3.9
+  flutter_svg: ^2.0.9
+  freezed_annotation: ^2.4.1
+  gaimon: ^1.2.1
+  get: ^4.6.6
+  google_sign_in: ^6.2.1
+  image_picker: ^1.0.7
+  json_annotation: ^4.8.1
+  mime: ^1.0.4
+  open_store: ^0.5.0
+  package_info_plus: ^4.2.0
+  path_provider: ^2.1.2
+  percent_indicator: ^4.2.3
+  permission_handler: ^11.1.0
+  pull_to_refresh: ^2.0.0
+  screenshot: ^2.1.0
+  url_launcher: ^6.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  platform: ^3.1.0
+  flutter_lints: ^2.0.1
+  build_runner: ^2.3.2
+  json_serializable: ^6.6.0
+  flutter_gen_runner: ^5.3.1
+  freezed: ^2.3.2
+  retrofit_generator: ^7.0.0
+
+dependency_overrides:
+  flutter_svg: ^2.0.3
+  intl: ^0.18.0
+
+
+
+
+flutter_gen:
+  integrations:
+    flutter_svg: true
+  colors:
+    inputs:
+      - assets/color/colors.xml
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/jsons/
+
