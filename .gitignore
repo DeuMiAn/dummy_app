@@ -32,6 +32,11 @@ migrate_working_dir/
 .pub/
 /build/
 
+#개인적으로는 이 구문을 추천
+.fvm 
+#공식 문서에서 요청한 구문
+.fvm/flutter_sdk 
+
 # Symbolication related
 app.*.symbols
 

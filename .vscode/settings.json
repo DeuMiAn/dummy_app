@@ -1,0 +1,5 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "dart.flutterSdkPath": "~/fvm/versions/3.16.8",
+    "liveServer.settings.port": 5502
+}

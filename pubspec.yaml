@@ -64,7 +64,7 @@ flutter_gen:
     flutter_svg: true
   colors:
     inputs:
-      - assets/color/colors.xml
+      # - assets/color/colors.xml
 
 flutter:
   uses-material-design: true
