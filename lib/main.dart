@@ -1,13 +1,18 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:dummy_app/app/common/util.func.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
+import 'package:reman_app/app/common/util.func.dart';
 
 void main() async {
-  runZonedGuarded(() {
+  runZonedGuarded(() async {
+    // 비동기 사용처리
+    WidgetsFlutterBinding.ensureInitialized();
+
+    // firbase 초기화
     runApp(const MainApp());
   }, (error, stackTrace) {
     log('error out side:', error: error, stackTrace: stackTrace);

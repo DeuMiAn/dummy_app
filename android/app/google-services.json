@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "759617768234",
+    "project_id": "reman-eeec1",
+    "storage_bucket": "reman-eeec1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759617768234:android:2265d48f1f0c8a2170ac53",
+        "android_client_info": {
+          "package_name": "io.kara.reman.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaGxTj_ZIS0X_ygZngJIXkRjozUPmakSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.example.dummy_app
+package io.kara.reman.app
 
 import io.flutter.embedding.android.FlutterActivity
 
