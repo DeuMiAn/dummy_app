@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="reman primary ice color">#84B5FF</color>
+    <color name="reman primary color">#0066FF</color>
+    <color name="reman back color">#000E59</color>
+</resources>
+

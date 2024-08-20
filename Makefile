@@ -4,7 +4,13 @@ clean: podfileLockClean androidGradleClean cacheClean
 
 androidGradleClean:
 	@echo "╠ Cleaning Android Gradle build..."
-	@cd android && ./gradlew clean
+	@if [ ! -f ./android/gradlew ]; then \
+		echo "╠ Initializing Android Gradle project..."; \
+		cd android && $(FLUTTER) pub get && $(FLUTTER) build apk --debug; \
+	else \
+		cd android && ./gradlew clean; \
+	fi
+
 
 podfileLockClean:
 	@echo "╠ Deleting Podfile.lock..."
