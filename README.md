@@ -15,6 +15,9 @@ A new Flutter project.
 ### 모델, 이미지 추가 후 실행
 - flutter packages pub run build_runner build
 
+### 패키지 이름 변경
+- dart run change_app_package_name:main com.new.package.name
+
 ### ios
 - cd ios
 - pod install

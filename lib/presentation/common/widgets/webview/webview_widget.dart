@@ -13,6 +13,7 @@ class Webview extends StatefulWidget {
   final bool showAppBar;
   final bool olnyBack;
   final bool openNewWebViewWhenDetailPage;
+  final Function(InAppWebViewController)? onWebViewCreatedFunc;
 
   const Webview({
     super.key,
@@ -22,6 +23,7 @@ class Webview extends StatefulWidget {
     this.showAppBar = true,
     this.olnyBack = false,
     this.openNewWebViewWhenDetailPage = false,
+    this.onWebViewCreatedFunc,
   });
 
   @override
@@ -78,6 +80,7 @@ class WebviewState extends State<Webview> {
   void onWebViewCreated(controller) {
     WebviewFunc.addJavascriptHandler(controller);
     webViewController = controller;
+    widget.onWebViewCreatedFunc?.call(controller);
   }
 
   Future<PermissionRequestResponse?> androidOnPermissionRequest(
