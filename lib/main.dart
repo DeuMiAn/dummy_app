@@ -1,14 +1,20 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:dummy_app/common/bindings/app_binding.dart';
+import 'package:dummy_app/common/bindings/binding.dart';
+import 'package:dummy_app/common/bindings/network_binding.dart';
 import 'package:dummy_app/common/config/app.pages.dart';
 import 'package:dummy_app/common/config/app.routes.dart';
+import 'package:dummy_app/common/constant/network_constant.dart';
 import 'package:dummy_app/common/util.func.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+
+import 'common/config/app.config.dart';
 
 void main() async {
   runZonedGuarded(() async {
@@ -23,6 +29,11 @@ void main() async {
         ignoreSsl:
             true // option: set to false to disable working with http links (default: false)
         );
+
+    // Env 환경에 따른 분리
+    Get.put(Uri.parse(AppConfig.apiDomain), tag: kApiBaseUrlTag);
+    Get.put(Uri.parse(AppConfig.imgDomain), tag: kImageBaseUrlTag);
+    Get.put(Uri.parse(AppConfig.fileDomain), tag: kFileBaseUrlTag);
 
     runApp(const MainApp());
   }, (error, stackTrace) {
@@ -40,9 +51,9 @@ class MainApp extends StatelessWidget {
       getPages: AppPages.pages,
       scaffoldMessengerKey: kScaffoldMessengerKey,
       debugShowCheckedModeBanner: true,
-      // initialBinding: MultipleBindingBuilder(
-      //   bindings: [AppBinding(), NetworkBinding()],
-      // ),
+      initialBinding: MultipleBindingBuilder(
+        bindings: [AppBinding(), NetworkBinding()],
+      ),
       builder: (context, child) {
         EasyLoading.instance
           ..loadingStyle = EasyLoadingStyle.custom
