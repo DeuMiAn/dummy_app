@@ -7,14 +7,16 @@ class InitView extends StatelessWidget {
   const InitView({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: ColorName.remanPrimaryColor,
-      child: const Stack(children: [
-        Webview(
-          url: 'https://docs.flutter.dev/',
-          title: 'title',
-        ),
-      ]),
+    return Scaffold(
+      body: Container(
+        color: ColorName.remanPrimaryColor,
+        child: const Stack(children: [
+          Webview(
+            url: 'https://docs.flutter.dev/',
+            title: 'title',
+          ),
+        ]),
+      ),
     );
   }
 }
