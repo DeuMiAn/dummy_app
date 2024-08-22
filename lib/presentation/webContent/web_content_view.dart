@@ -3,10 +3,10 @@ import 'package:dummy_app/presentation/common/widgets/webview/webview_widget.dar
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'main_controller.dart';
+import 'web_content_controller.dart';
 
-class MainView extends GetView<MainController> {
-  const MainView({super.key});
+class WebContentView extends GetView<WebContentController> {
+  const WebContentView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class MainView extends GetView<MainController> {
           Obx(
             () => Webview(
               url: controller.webUrl.value,
-              title: 'title',
+              title: controller.webUrl.value,
             ),
           ),
         ]),

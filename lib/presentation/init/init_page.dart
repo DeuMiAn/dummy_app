@@ -11,7 +11,7 @@ class InitPage extends GetPage {
           name: routeName(),
           page: () => const InitView(),
           binding: BindingsBuilder(() {
-            Get.put(() => InitController());
+            Get.put(InitController());
           }),
         );
 }
