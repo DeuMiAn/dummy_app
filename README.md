@@ -2,6 +2,16 @@
 
 A new Flutter project.
 
+
+#앱 환경
+[✓] Flutter (Channel stable, 3.22.3, on macOS 13.5 22G74 darwin-arm64, locale ko-KR)
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+[✓] Xcode - develop for iOS and macOS (Xcode 15.0.1)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2022.3)
+[✓] VS Code (version 1.89.1)
+[✓] Connected device (5 available)
+
 ## Getting Started
 - flutter doctor
 - flutter clean
