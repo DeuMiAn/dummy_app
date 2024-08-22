@@ -18,6 +18,11 @@ A new Flutter project.
 ### 패키지 이름 변경
 - dart run change_app_package_name:main com.new.package.name
 
+### 앱 아이콘 변경
+- https://easyappicon.com/  이사이트에서 아이콘 생성후 512아이콘 사용
+- 아이콘위치 assets/icon/icon.png
+- flutter pub run flutter_launcher_icons
+
 ### ios
 - cd ios
 - pod install
